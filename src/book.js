@@ -10,10 +10,16 @@ function buildMainCharacter(name, age, pronouns) {
   };
 }
 
+function saveReview(review, previousReviews) {
+  if (!previousReviews.includes(review)) {
+    previousReviews.push(review);
+  }
+}
+
 module.exports = {
   createTitle,
   buildMainCharacter,
-  // saveReview,
+  saveReview,
   // calculatePageCount,
   // writeBook,
   // editBook
