@@ -18,9 +18,18 @@ function listTitles(shelf) {
   return titles.join(', ');
 }
 
+function searchShelf(shelf, title) {
+  let book = shelf.find(book => book.title === title);
+  if (book) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 module.exports = {
   shelfBook,
   unshelfBook,
   listTitles,
-  // searchShelf
+  searchShelf
 };
